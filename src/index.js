@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded"), () => {
   // your code here
   const fieldInput = document.getElementbyId("new-task-description");
   const formEle = document.querySelector("form");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     handleToDo(newtask);
   }
   formElement.reset()
-  }));
+  })
 
 
 function css(element, style){
@@ -19,19 +19,22 @@ function css(element, style){
   element.style[property] = style[property];
 
 }
-function handleToDo(newtask)
+function handleToDo(newtask){
 let itemList = document.createElement("li");
-let btn = document.createElement("button")
+let btn = document.createElement("button");
 css(btn, {
   'background-color':"green",
   "background":"blue",
   "color":"purple",
   'padding': '5px'
-});
+})};
 btn.addEventListener('click' ,handleDelete)
 btn.textContent = 'delete'
 itemList.innerText = `${newtask}`;
 itemList.appendChild(btn)
 document.querySelector('#tasks').appendChild(itemList)
+}
+functionhandleDelete(e){
+  e.target.parentNode.remove()
 }
 
