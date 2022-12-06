@@ -11,9 +11,27 @@ document.addEventListener("DOMContentLoaded", () => {
     handleToDo(newtask);
   }
   formElement.reset()
-  });
-}:
+  }));
+
 
 function css(element, style){
-  
+  for(const property in style)
+  element.style[property] = style[property];
+
 }
+function handleToDo(newtask)
+let itemList = document.createElement("li");
+let btn = document.createElement("button")
+css(btn, {
+  'background-color':"green",
+  "background":"blue",
+  "color":"purple",
+  'padding': '5px'
+});
+btn.addEventListener('click' ,handleDelete)
+btn.textContent = 'delete'
+itemList.innerText = `${newtask}`;
+itemList.appendChild(btn)
+document.querySelector('#tasks').appendChild(itemList)
+}
+
