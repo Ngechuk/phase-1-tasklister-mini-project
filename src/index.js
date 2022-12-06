@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   formEle.addEventListener('submit',(e) =>{
     let newtask = fieldInput.value
     e.preventDefault();
-  
-  })
+  if(newtask.lenth ===0){
+    alert('task shouldnt be empty')
+  }else{
+    handleToDo(newtask);
+  }
+  formElement.reset()
+  });
 }:
+
+function css(element, style){
+  
+}
